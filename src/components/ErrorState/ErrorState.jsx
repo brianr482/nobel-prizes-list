@@ -18,7 +18,9 @@ export function ErrorState({ onRetryClick }) {
         <br />
         Please try again.
       </Message>
-      <RetryButton onClick={onRetryClick}>Try again</RetryButton>
+      {onRetryClick && (
+        <RetryButton onClick={onRetryClick}>Try again</RetryButton>
+      )}
     </Container>
   );
 }
