@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { FONT_SIZES } from 'styles/utils/constants';
+import { FONT_SIZES, COLORS } from 'styles/utils/constants';
 
 export const Card = styled.div`
   max-width: 60rem;
@@ -15,7 +15,7 @@ export const Card = styled.div`
 export const Header = styled.div`
   display: flex;
   flex-direction: column;
-  border-bottom: 0.1rem solid gray;
+  border-bottom: 0.1rem solid ${COLORS.dividerColor};
   padding-bottom: 0.5rem;
 `;
 
