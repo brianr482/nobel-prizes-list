@@ -11,50 +11,22 @@ import {
   LaureatesLabel,
   LaureatesNames,
 } from './NobelPrizeItem.styles';
+import { getLaureatesNumber, getLaureatesNames } from 'utils';
 
-function NobelPrizeItem({ item: { category, year, laureates } }) {
-  /**
-   * Generate label to indicate the total number of laureates
-   * @param {number} lauratesTotal Total of laureates for the current Nobel
-   * @returns {string} Formatted label indicating the number of laureates
-   */
-  const getLauratesNumber = (lauratesTotal) => {
-    return `${lauratesTotal} ${
-      lauratesTotal > 1 ? ' laureates' : 'laureate'
-    } for this Nobel`;
-  };
-
-  /**
-   * Concat all the laureates names into single string separated by commas
-   * @param {object[]} laurates List of laureates for the current Nobel
-   * @returns {string} Formatted label indicating the names of laureates
-   */
-  const getLaureatesNames = (laurates) => {
-    let lauratesNames = '';
-    const lauratesTotal = laurates.length;
-    laurates.forEach((laurate, idx) => {
-      let fullName = laurate.firstname;
-      if (laurate.surname) {
-        fullName += ` ${laurate.surname}`;
-      }
-      const comma = idx === lauratesTotal - 1 ? '' : ', ';
-      lauratesNames += `${fullName}${comma}`;
-    });
-
-    return lauratesNames;
-  };
-
+function NobelPrizeItem({ item, onItemClick }) {
   return (
-    <Container>
+    <Container onClick={() => onItemClick(item)}>
       <Header>
-        <Category>{category}</Category>
-        <Year>{year}</Year>
+        <Category>{item.category}</Category>
+        <Year>{item.year}</Year>
       </Header>
       <Description>
-        <LaureatesNumber>{getLauratesNumber(laureates.length)}</LaureatesNumber>
+        <LaureatesNumber>
+          {getLaureatesNumber(item.laureates.length)}
+        </LaureatesNumber>
         <br />
         <LaureatesLabel>Laureates</LaureatesLabel>
-        <LaureatesNames>{getLaureatesNames(laureates)}</LaureatesNames>
+        <LaureatesNames>{getLaureatesNames(item.laureates)}</LaureatesNames>
       </Description>
       <ShowMoreButton>Show more</ShowMoreButton>
     </Container>
@@ -75,6 +47,7 @@ NobelPrizeItem.propTypes = {
       })
     ),
   }).isRequired,
+  onItemClick: PropTypes.func.isRequired,
 };
 
 export default NobelPrizeItem;
