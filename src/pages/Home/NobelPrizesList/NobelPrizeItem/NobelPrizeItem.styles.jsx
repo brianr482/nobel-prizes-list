@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { FONT_SIZES, COLORS } from 'styles/utils/constants';
+import Button from 'components/Button/Button.styles';
 
 export const Container = styled.div`
   width: 100%;
@@ -60,8 +61,7 @@ export const LaureatesNames = styled.p`
   text-overflow: ellipsis;
 `;
 
-export const ShowMoreButton = styled.button`
-  color: ${COLORS.primaryTextColor};
+export const ShowMoreButton = styled(Button)`
   font-weight: bold;
   cursor: pointer;
   width: 100%;
@@ -70,8 +70,6 @@ export const ShowMoreButton = styled.button`
   position: absolute;
   bottom: 0;
   left: 0;
-  border: 0;
   border-bottom-left-radius: 0.8rem;
   border-bottom-right-radius: 0.8rem;
-  background-color: ${COLORS.primaryColor};
 `;
