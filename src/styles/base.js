@@ -23,7 +23,7 @@ export default css`
   }
   body,
   html {
-    height: 100vh;
+    height: 100%;
   }
 
   *,
