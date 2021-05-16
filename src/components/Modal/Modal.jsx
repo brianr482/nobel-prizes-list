@@ -1,16 +1,21 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-// eslint-disable-next-line no-unused-vars
-// import { CSS } from 'css.gg';
 import { Overlay, Container, ClearButton } from './Modal.styles';
+import Icon from 'components/Icon';
 
-export function Modal({ children }) {
+export function Modal({ children, onCloseClick }) {
+  /**
+   * Stop propagation when user clicks on the modal container
+   * @param {MouseEvent} e HTML click event
+   * @returns {void}
+   */
+  const onContainerClick = (e) => e.stopPropagation();
   return (
-    <Overlay>
-      <Container>
+    <Overlay onClick={onCloseClick}>
+      <Container onClick={onContainerClick}>
         {children}
-        <ClearButton variant="icon">
-          <i className="gg-close"></i>
+        <ClearButton variant="icon" onClick={onCloseClick}>
+          <Icon name="close" />
         </ClearButton>
       </Container>
     </Overlay>
@@ -19,6 +24,7 @@ export function Modal({ children }) {
 
 Modal.propTypes = {
   children: PropTypes.node.isRequired,
+  onCloseClick: PropTypes.func,
 };
 
 export default Modal;
