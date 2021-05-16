@@ -13,4 +13,5 @@ export const COLORS = {
   secondaryTextColor: '#757575',
   dividerColor: '#bdbdbd',
   primaryColor: '#99c4f7',
+  accentColor: '#D9C5F8',
 };
