@@ -31,10 +31,11 @@ const StyledButton = ({ variant, disabled }) => {
 
   return {
     border: 0,
+    borderRadius: '1.7rem',
     margin: 0,
     fontWeight: 'bold',
     cursor: 'pointer',
-    padding: '1rem',
+    padding: '1rem 3rem',
     ...(propsByVariant && propsByVariant.main),
     '&:hover': !disabled && {
       ...(propsByVariant && propsByVariant.hover),

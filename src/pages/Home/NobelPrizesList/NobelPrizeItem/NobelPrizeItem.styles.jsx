@@ -70,6 +70,8 @@ export const ShowMoreButton = styled(Button)`
   position: absolute;
   bottom: 0;
   left: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
   border-bottom-left-radius: 0.8rem;
   border-bottom-right-radius: 0.8rem;
 `;

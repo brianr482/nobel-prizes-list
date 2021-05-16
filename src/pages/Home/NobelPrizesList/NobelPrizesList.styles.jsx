@@ -7,7 +7,7 @@ export const Container = styled.div`
 `;
 
 export const Grid = styled.div`
-  margin-top: 2rem;
+  margin: 2rem 0;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
