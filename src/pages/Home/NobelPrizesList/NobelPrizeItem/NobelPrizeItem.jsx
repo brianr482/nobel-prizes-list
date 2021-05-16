@@ -4,13 +4,13 @@ import {
   Container,
   Header,
   Category,
-  Year,
   ShowMoreButton,
   Description,
   LaureatesNumber,
   LaureatesLabel,
   LaureatesNames,
 } from './NobelPrizeItem.styles';
+import Chip from 'components/Chip';
 import { getLaureatesNumber, getLaureatesNames } from 'utils';
 
 function NobelPrizeItem({ item, onItemClick }) {
@@ -18,7 +18,7 @@ function NobelPrizeItem({ item, onItemClick }) {
     <Container onClick={() => onItemClick(item)}>
       <Header>
         <Category>{item.category}</Category>
-        <Year>{item.year}</Year>
+        <Chip>{item.year}</Chip>
       </Header>
       <Description>
         <LaureatesNumber>

@@ -12,7 +12,7 @@ export const Overlay = styled.div`
   align-items: center;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 2;
-  padding: 2rem;
+  padding: 1.5rem;
 `;
 
 export const Container = styled.div`

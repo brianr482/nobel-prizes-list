@@ -26,12 +26,6 @@ export const Category = styled.h1`
   text-transform: capitalize;
 `;
 
-export const Year = styled.span`
-  margin: 0;
-  font-size: ${FONT_SIZES.md};
-  color: ${COLORS.secondaryTextColor};
-`;
-
 export const Description = styled.div`
   height: calc(100% - 5.3rem);
   width: 100%;
