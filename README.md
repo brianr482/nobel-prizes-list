@@ -1,4 +1,4 @@
-# Lending Loop Assignment - [live demo](https://lending-loop-assignment.vercel.app/)
+# Lending Loop Assignment - [live demo](https://lending-loop-assignment.vercel.app/) - [wireframes](https://www.figma.com/file/XpSz18dfW3gt5W33WYLu7F/Nobel-Prizes-wireframes-Brian-Ramirez)
 Responsive web app that lists the Nobel Prizes awarded between 2015 and 2017. This project was built with React.js, Create React App, and Emotion. Deployed with Vercel.
 > Candidate: Brian Ramirez
 
