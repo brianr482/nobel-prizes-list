@@ -13,6 +13,12 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
+  top: 0;
+  transition: top ease 0.3s;
+
+  &:hover {
+    top: -0.5rem;
+  }
 `;
 
 export const Header = styled.div`

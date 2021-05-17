@@ -5,10 +5,11 @@ import { COLORS } from 'styles/utils/constants';
 const getPropsByVariant = (variant) => {
   const iconVariantProps = {
     main: {
-      padding: 0,
+      padding: '0.3rem',
       backgroundColor: 'transparent',
       color: COLORS.secondaryTextColor,
     },
+    hover: { backgroundColor: '#c5c5c54d' },
   };
 
   const solidVariantProps = {
@@ -16,6 +17,7 @@ const getPropsByVariant = (variant) => {
       backgroundColor: COLORS.primaryColor,
       color: COLORS.primaryTextColor,
     },
+    hover: { backgroundColor: '#72affa' },
   };
 
   const variants = {
@@ -36,6 +38,7 @@ const StyledButton = ({ variant, disabled }) => {
     fontWeight: 'bold',
     cursor: 'pointer',
     padding: '1rem 3rem',
+    transition: 'background-color 0.5s ease',
     ...(propsByVariant && propsByVariant.main),
     '&:hover': !disabled && {
       ...(propsByVariant && propsByVariant.hover),

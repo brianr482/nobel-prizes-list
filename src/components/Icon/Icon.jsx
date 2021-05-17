@@ -4,7 +4,7 @@ import React from 'react';
 export function Icon({ name, className }) {
   /**
    * Generate the GG css classname for the given icon name
-   * @param {strin} iconName Name of the icon
+   * @param {string} iconName Name of the icon
    * @returns CSS classname for the given icon based on the GG css syntax
    */
   const getCssClassName = (iconName) => {
