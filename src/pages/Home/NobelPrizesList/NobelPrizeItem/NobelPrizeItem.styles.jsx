@@ -16,8 +16,10 @@ export const Container = styled.div`
   top: 0;
   transition: top ease 0.3s;
 
-  &:hover {
-    top: -0.5rem;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      top: -0.5rem;
+    }
   }
 `;
 
