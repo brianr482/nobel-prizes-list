@@ -12,14 +12,13 @@ export default function NobelPrizesList() {
   const [nobelPrizes, setNobelPrizes] = useState(null);
   const [currentNobelPrize, setCurrentNobelPrize] = useState(null);
   const [isError, setIsError] = useState(false);
-  const [retry, setRetry] = useState(false);
+  const [retryTrigger, setRetryTrigger] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchNobelPrizes = async () => {
       setIsLoading(true);
       setIsError(false);
-      setRetry(false);
       try {
         const result = await fetchPrizes({
           year: 2015,
@@ -34,7 +33,7 @@ export default function NobelPrizesList() {
     };
 
     fetchNobelPrizes();
-  }, [retry]);
+  }, [retryTrigger]);
 
   /**
    * Set the given nobel as the current Nobel Prize when user click on it
@@ -52,7 +51,7 @@ export default function NobelPrizesList() {
   /**
    * Retry the Nobel Prizes fetching operation
    */
-  const retryFetch = () => setRetry(true);
+  const retryFetch = () => setRetryTrigger(!retryTrigger);
 
   return (
     <Container>
