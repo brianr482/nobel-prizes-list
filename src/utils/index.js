@@ -1,3 +1,5 @@
+import he from 'he';
+
 /**
  * Generate label to indicate the total number of laureates
  * @param {number} lauratesTotal Total of laureates of a Nobel Prize
@@ -20,7 +22,7 @@ export const getLaureateFullName = (laureate) => {
     fullname += ` ${laureate.surname}`;
   }
 
-  return fullname;
+  return he.decode(fullname);
 };
 
 /**
