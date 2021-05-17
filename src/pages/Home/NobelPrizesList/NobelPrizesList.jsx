@@ -5,11 +5,9 @@ import NobelPrizeModal from './NobelPrizeModal';
 import ErrorState from 'components/ErrorState';
 import Loader from 'components/Loader';
 import { fetchPrizes } from 'utils/api/nobelPrize';
-// eslint-disable-next-line no-unused-vars
-import { NOBEL_PRIZES_LIST_MOCK } from './mock';
 
 export default function NobelPrizesList() {
-  const [nobelPrizes, setNobelPrizes] = useState(null);
+  const [nobelPrizes, setNobelPrizes] = useState([]);
   const [currentNobelPrize, setCurrentNobelPrize] = useState(null);
   const [isError, setIsError] = useState(false);
   const [retryTrigger, setRetryTrigger] = useState(false);
