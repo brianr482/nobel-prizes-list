@@ -3,7 +3,9 @@ Responsive web app that lists the Nobel Prizes awarded between 2015 and 2017. Th
 > Candidate: Brian Ramirez
 
 ## How to run the app
-Run the following command `yarn start`. It runs the app in the development mode.\
+First, you need to create a `.env` file in the root of the project based on the `.env.development` file.
+Set the corresponding values for the environment variables.
+Then, run the following command `yarn start`. It runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ## How to run tests
