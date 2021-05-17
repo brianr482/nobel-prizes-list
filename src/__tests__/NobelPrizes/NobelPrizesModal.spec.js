@@ -1,7 +1,7 @@
 import { expect } from '@jest/globals';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import NobelPrizeModal from 'pages/home/NobelPrizesList/NobelPrizeModal';
+import NobelPrizeModal from 'pages/home/NobelPrizesList/NobelPrizeModal/NobelPrizeModal';
 import nobelPrizesIndexResultMock from '../__mocks__/nobelPrizeIndex';
 
 it('renders a Nobel Prize modal', async () => {

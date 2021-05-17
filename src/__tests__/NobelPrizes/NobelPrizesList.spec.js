@@ -1,7 +1,7 @@
 import { expect } from '@jest/globals';
 import { render, act, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import NobelPrizesList from 'pages/home/NobelPrizesList';
+import NobelPrizesList from 'pages/home/NobelPrizesList/NobelPrizesList';
 import nobelPrizesIndexResultMock from '../__mocks__/nobelPrizeIndex';
 
 afterEach(() => {
