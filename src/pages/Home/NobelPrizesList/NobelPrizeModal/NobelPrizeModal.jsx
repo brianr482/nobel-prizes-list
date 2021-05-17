@@ -56,16 +56,18 @@ function NobelPrizeModal({
   return (
     <Modal onCloseClick={onCloseClick}>
       <Header>{getTitle(category, year)}</Header>
-      <LaureatesNumber>{getLaureatesNumber(laureates.length)}</LaureatesNumber>
+      <LaureatesNumber data-testid="modal-laureates-number">
+        {getLaureatesNumber(laureates.length)}
+      </LaureatesNumber>
       <LaureatesLabel>Laureates authors and motivations</LaureatesLabel>
-      <LaureatesList>
+      <LaureatesList data-testid="modal-laureates-list">
         {groupLaureatesByMotivation(laureates).map((laureateGroup, idx) => (
           <Laureate key={idx}>
             <LaureateAuthors>
               {getLaureatesNames(laureateGroup.authors, true)}
             </LaureateAuthors>
             <LaureateMotivation>
-              {upperFirst(laureateGroup.motivation.replaceAll('"', ''))}
+              {upperFirst(laureateGroup.motivation.replace(/"/g, ''))}
             </LaureateMotivation>
           </Laureate>
         ))}

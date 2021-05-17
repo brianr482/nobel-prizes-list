@@ -14,7 +14,11 @@ export function Modal({ children, onCloseClick }) {
     <Overlay onClick={onCloseClick}>
       <Container onClick={onContainerClick}>
         {children}
-        <ClearButton variant="icon" onClick={onCloseClick}>
+        <ClearButton
+          data-testid="modal-clear-btn"
+          variant="icon"
+          onClick={onCloseClick}
+        >
           <Icon name="close" />
         </ClearButton>
       </Container>

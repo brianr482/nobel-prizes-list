@@ -59,7 +59,7 @@ export default function NobelPrizesList() {
       {isLoading && <Loader />}
       {isError && !isLoading && <ErrorState onRetryClick={retryFetch} />}
       {!isError && !isLoading && (
-        <Grid>
+        <Grid data-testid="nobel-prizes-grid">
           {nobelPrizes.map((nobelPrize, idx) => (
             <NobelPrizeItem
               key={idx}

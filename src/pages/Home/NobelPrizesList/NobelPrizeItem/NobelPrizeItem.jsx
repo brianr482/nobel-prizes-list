@@ -20,7 +20,7 @@ function NobelPrizeItem({ item, onItemClick }) {
         <Category>{item.category}</Category>
         <Chip>{item.year}</Chip>
       </Header>
-      <Description>
+      <Description data-testid={`${item.category}-${item.year}-description`}>
         <LaureatesNumber>
           {getLaureatesNumber(item.laureates.length)}
         </LaureatesNumber>
