@@ -1,6 +1,5 @@
-# Lending Loop Assignment - [live demo](https://lending-loop-assignment.vercel.app/) - [wireframes](https://www.figma.com/file/XpSz18dfW3gt5W33WYLu7F/Nobel-Prizes-wireframes-Brian-Ramirez)
+#  Nobel Prizes List React App - [live demo](https://lending-loop-assignment.vercel.app/) - [wireframes](https://www.figma.com/file/XpSz18dfW3gt5W33WYLu7F/Nobel-Prizes-wireframes-Brian-Ramirez)
 Responsive web app that lists the Nobel Prizes awarded between 2015 and 2017. This project was built with React.js, Create React App, and Emotion. Deployed with Vercel.
-> Candidate: Brian Ramirez
 
 ## How to run the app
 First, you need to create a `.env` file in the root of the project based on the `.env.development` file.
