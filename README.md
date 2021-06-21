@@ -1,4 +1,4 @@
-#  Nobel Prizes List React App - [live demo](https://lending-loop-assignment.vercel.app/) - [wireframes](https://www.figma.com/file/XpSz18dfW3gt5W33WYLu7F/Nobel-Prizes-wireframes-Brian-Ramirez)
+#  Nobel Prizes List React App - [live demo](https://nobel-prizes-list.vercel.app/)
 Responsive web app that lists the Nobel Prizes awarded between 2015 and 2017. This project was built with React.js, Create React App, and Emotion. Deployed with Vercel.
 
 ## How to run the app
